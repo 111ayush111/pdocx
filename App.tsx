@@ -4,11 +4,12 @@ import { ControlPanel } from './components/ControlPanel';
 import { ScreenshotGrid } from './components/ScreenshotGrid';
 import { Header } from './components/Header';
 import { extractTextFromImage } from './services/geminiService';
+import FloatingDogIcon from './components/FloatingDogIcon';
 import { useExport } from './hooks/useExport';
 
 const App: React.FC = () => {
     const [screenshots, setScreenshots] = useState<Screenshot[]>([]);
-    const [setName, setSetName] = useState<string>('My-Screenshot-Set');
+    const [setName, setSetName] = useState<string>('My-Click-Set');
     const [globalLoading, setGlobalLoading] = useState<string | null>(null);
     const [ocrLoading, setOcrLoading] = useState<string | null>(null);
 
@@ -50,7 +51,7 @@ const App: React.FC = () => {
     
     const handleNewSet = () => {
         setScreenshots([]);
-        const defaultName = `My-Screenshot-Set-${new Date().toISOString().slice(0,10)}`;
+        const defaultName = `My-Click-Set-${new Date().toISOString().slice(0,10)}`;
         const newName = prompt("Enter a name for your new set:", defaultName);
         setSetName(newName || defaultName);
     };
@@ -75,7 +76,6 @@ const App: React.FC = () => {
         setGlobalLoading(null);
     };
 
-
     return (
         <div className="min-h-screen bg-neutral text-gray-800 font-sans">
             <Header />
@@ -98,6 +98,7 @@ const App: React.FC = () => {
                     ocrLoadingId={ocrLoading}
                 />
             </main>
+            <FloatingDogIcon />
             {globalLoading && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
                     <div className="bg-white p-6 rounded-lg shadow-xl flex items-center space-x-4">

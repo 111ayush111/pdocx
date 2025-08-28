@@ -55,7 +55,7 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
                     </button>
                     
                     <button onClick={triggerFileInput} className="px-4 py-2 text-sm font-medium text-white bg-accent hover:bg-blue-600 border border-transparent rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent transition-colors">
-                        Add Screenshot ({screenshotCount})
+                        Add Image ({screenshotCount})
                     </button>
                     <input type="file" ref={fileInputRef} onChange={handleFileChange} className="hidden" accept="image/png, image/jpeg, image/webp" />
 
