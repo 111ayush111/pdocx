@@ -1,0 +1,5 @@
+{
+  "name": "Screenshot Flow Manager",
+  "description": "An intelligent screenshot management tool to capture, organize with OCR, and export screenshot sets to PDF or DOCX format, powered by Gemini.",
+  "requestFramePermissions": []
+}
