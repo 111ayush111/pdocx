@@ -1,13 +1,15 @@
 {
-  "name": "screenshot-flow-manager",
-  "version": "0.0.0",
+  "name": "docx-pdf",
+  "version": "0.1.0",
   "private": true,
+  "type": "module",
   "homepage": "https://111ayush111.github.io/images2pdf",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "vite build && gh-pages -d dist"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@google/genai": "^1.16.0",
@@ -22,8 +24,8 @@
     "@types/node": "^22.14.0",
     "@types/react": "^19.1.12",
     "@types/react-dom": "^19.1.9",
-    "@vitejs/plugin-react": "^5.0.2",
-    "gh-pages": "^6.3.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "gh-pages": "^6.1.1",
     "typescript": "~5.8.2",
     "vite": "^6.2.0"
   }
