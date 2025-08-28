@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react';   // 👈 Add this line
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
   return {
-    base: '/images2pdf/',   // 👈 for GitHub Pages
+    base: '/docx-pdf/',   // 👈 for GitHub Pages
     plugins: [react()],     // 👈 Add this line
     define: {
       'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
@@ -15,6 +15,10 @@ export default defineConfig(({ mode }) => {
       alias: {
         '@': path.resolve(__dirname, '.'),
       }
+    },
+    build: {
+      outDir: 'dist',
+      sourcemap: true
     }
   };
 });
