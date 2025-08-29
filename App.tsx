@@ -9,7 +9,7 @@ import { useExport } from './hooks/useExport';
 
 const App: React.FC = () => {
     const [screenshots, setScreenshots] = useState<Screenshot[]>([]);
-    const [setName, setSetName] = useState<string>('My-Click-Set');
+    const [setName, setSetName] = useState<string>('My-Screenshot-Set');
     const [globalLoading, setGlobalLoading] = useState<string | null>(null);
     const [ocrLoading, setOcrLoading] = useState<string | null>(null);
 
@@ -51,7 +51,7 @@ const App: React.FC = () => {
     
     const handleNewSet = () => {
         setScreenshots([]);
-        const defaultName = `My-Click-Set-${new Date().toISOString().slice(0,10)}`;
+        const defaultName = `My-Screenshot-Set-${new Date().toISOString().slice(0,10)}`;
         const newName = prompt("Enter a name for your new set:", defaultName);
         setSetName(newName || defaultName);
     };
