@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Screenshot Flow Manager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#1e3a8a',
+              secondary: '#1d4ed8',
+              accent: '#3b82f6',
+              neutral: '#f5f5f5',
+              'base-100': '#ffffff',
+            }
+          }
+        }
+      }
+    </script>
+    <!-- jsPDF for PDF Generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- docx for DOCX Generation -->
+    <script src="https://unpkg.com/docx@8.5.0/build/index.js"></script>
+    <!-- Remove Babel for production -->
+
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai",
+    "react": "https://esm.sh/react@18.2.0",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/docx-pdf/assets/index-CCuaVOmY.js"></script>
+</head>
+  <body class="bg-neutral">
+    <div id="root"></div> <!-- Change to module -->
+  </body>
+</html>
